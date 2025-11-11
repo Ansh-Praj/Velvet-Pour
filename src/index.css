@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Modern Negra";
+    src: url('/fonts/Modern-Negra-Demo.woff2') format('woff2');
+    font-display: swap;
+}
+
+@theme{
+    --font-mona: "Mona Sans", sans-serif;
+    --font-negra: "Modern Negra", sans-serif;
+    --color-myYellow: #e7d393
+}
+
+.bg-clip-text {
+  background: linear-gradient(to bottom, white, rgb(255, 255, 255, 0.4), rgb(255, 255, 255, 0.4));
+  background-clip: text;
+  -webkit-background-clip: text; 
+}
+
+.radial-gradient{
+    background: radial-gradient(circle at center, #434343 0%, black 50%, transparent 100%);
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.noisy{
+    background-image: url('./assets/images/noise.png');
+    inset: 0;
+}
+
+
