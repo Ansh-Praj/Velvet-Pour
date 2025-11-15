@@ -96,7 +96,7 @@ function Hero() {
 
   return (
     <section id='hero' className="relative min-h-screen w-full noisy border border-transparent">
-      <h1 className="font-negra text-center text-8xl md:text-[15vw] md:mt-32 mt-40 ">MOHITO'S</h1>
+      <h1 className="font-negra text-center text-8xl md:text-[15vw] md:mt-32 mt-40 text-transparent">MOHITO'S</h1>
 
       <img className='h-left-leaf absolute top-[75%] md:top-[18%] left-0 w-34 md:w-fit' src={leftLeaf} alt="left-leaf" />
       <img className='h-right-leaf absolute top-[50%] md:top-0 right-0 w-24 md:w-fit' src={rightLeaf} alt="right-leaf" />
