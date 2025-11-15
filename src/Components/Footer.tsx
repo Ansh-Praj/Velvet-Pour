@@ -54,11 +54,11 @@ function Footer() {
 
   return (
     <footer id="contact" ref={footerRef} className="relative overflow-hidden min-h-screen radial-gradient ">
-        <img src={footerRightLeafImage} alt="right-leaf" className="footer-right-leaf absolute -top-12 right-0" />
-        <img src={footerLeftLeafImage} alt="left-leaf" className="footer-left-leaf absolute -bottom-25 left-0" />
+        <img src={footerRightLeafImage} alt="right-leaf" className="w-50 md:w-fit footer-right-leaf absolute -top-12 right-0" />
+        <img src={footerLeftLeafImage} alt="left-leaf" className="w-50 md:w-fit footer-left-leaf absolute -bottom-25 left-0" />
 
         <div className="py-14 flex flex-col justify-between h-screen items-center gap-10 text-center text-2xl font-mona">
-            <h2 className="font-negra text-6xl">Where To Find Us</h2>
+            <h2 className="font-negra md:text-6xl text-5xl">Where To Find Us</h2>
 
             <div>
                 <p className="text-base uppercase mb-2">Visit Bur Bar</p>

@@ -77,12 +77,12 @@ function Menu() {
   const prevCocktail = getCocktailAt(-1)
 
   return (
-    <section id="menu" className="relative radial-gradient py-20 pb-40 mt-27">
+    <section id="menu" className="relative radial-gradient py-20 pb-40 px-5 md:px-0 md:mt-27">
 
       <img src={sliderRightLeafImage} alt="right-leaf" className='hidden md:block absolute -top-30 right-0' />
       <img src={sliderLeftLeafImage} alt="left-leaf" className='hidden md:block absolute bottom-20 translate-y-20 left-0 object-contain w-fit' /> 
 
-      <div className="font-negra grid grid-cols-4 text-3xl gap-20 max-w-6xl w-full mx-auto mb-30">
+      <div className=" font-negra grid grid-cols-2 md:grid-cols-4 md:text-3xl text-xl md:gap-20 gap-10 max-w-6xl w-full mx-auto md:mb-30 mb-20">
         {MenuList.map((item, idx) => (
             <button onClick={()=> setCurrentIndex(idx)} className={`border-b cursor-pointer pb-2 ${currentIndex !== idx ? "text-white/50" : ""}`} key={item.name}>{item.name}</button>
         ))}
@@ -92,15 +92,15 @@ function Menu() {
         <div className="absolute w-full flex justify-between items-center">
           <button 
           onClick={() => changeIndex(currentIndex - 1)}
-          className='font-negra text-3xl w-36 text-left cursor-pointer hover:text-myYellow'>
-            <span className='leading-1'>{prevCocktail.name}</span>
+          className='font-negra text-3xl md:w-36 w-fit text-left cursor-pointer hover:text-myYellow'>
+            <span className='leading-none md:block hidden'>{prevCocktail.name}</span>
             <img src={leftArrow} alt="left-arrow" />
           </button>
 
           <button 
           onClick={() => changeIndex(currentIndex + 1)}
-          className='font-negra text-3xl w-36 text-left cursor-pointer hover:text-myYellow'>
-            <span>{nextCocktail.name}</span>
+          className='font-negra text-3xl md:w-36 w-fit text-left cursor-pointer hover:text-myYellow'>
+            <span className='md:block hidden'>{nextCocktail.name}</span>
             <img src={rightArrow} alt="right-arrow" />
           </button>
         </div>
@@ -109,15 +109,15 @@ function Menu() {
           <img src={MenuList[currentIndex].image} id='cocktail-img' alt={MenuList[currentIndex].name} className='h-[60vh] object-contain' />
         </div>
 
-        <div className='absolute bottom-0 flex justify-between items-center w-full'>
-            <div className='space-y-4 translate-y-20'>
+        <div className='static md:absolute bottom-0 flex md:flex-row flex-col justify-between md:items-center w-full gap-10'>
+            <div className='space-y-4 md:translate-y-20'>
               <p className='font-mona'>Recipe For:</p>
-              <p className='font-negra text-myYellow text-6xl w-20'>{MenuList[currentIndex].name}</p>
+              <p className='font-negra text-myYellow md:text-6xl text-3xl md:w-20'>{MenuList[currentIndex].name}</p>
             </div>
 
-            <div className='max-w-md'>
-              <h2 id='cocktail-heading' className='text-5xl font-medium font-serif mb-5'>{MenuList[currentIndex].heading}</h2>
-              <p id='cocktail-description' className='w-[27rem] text-lg font-mona'>{MenuList[currentIndex].description}</p>
+            <div className='md:max-w-md'>
+              <h2 id='cocktail-heading' className='md:text-5xl text-3xl font-medium font-serif mb-5'>{MenuList[currentIndex].heading}</h2>
+              <p id='cocktail-description' className='md:w-[27rem] pe-5 text-lg font-mona'>{MenuList[currentIndex].description}</p>
             </div>
         </div>
       </div>
