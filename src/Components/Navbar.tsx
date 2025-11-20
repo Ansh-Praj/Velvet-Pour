@@ -40,7 +40,7 @@ function Navbar() {
       <nav className="max-w-7xl mx-auto py-5 flex flex-col md:flex-row items-center justify-between gap-5">
         <a href='#' className='flex items-center gap-x-2'>
           <img className='' src={logo} alt="logo" />
-          <p className='text-3xl font-negra -mb-2'>mera</p>
+          <p className='text-3xl font-negra -mb-2'>Velvet Pour</p>
         </a>
 
         <ul className='flex gap-6 text-sm md:gap-12 md:text-base font-mona'>

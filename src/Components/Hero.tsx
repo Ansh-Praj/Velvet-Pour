@@ -120,6 +120,7 @@ function Hero() {
         <video
           ref={videoRef}
           preload='auto'
+          
           autoPlay={isMobile}
           loop={isMobile}
           className='h-full  mx-auto object-cover'
